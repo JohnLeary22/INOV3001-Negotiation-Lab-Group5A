@@ -50,9 +50,9 @@ export const presentationGraphicData = {
     footer: 'PRACTICAL RECOMMENDATIONS · NOT AGREED TERMS',
   },
   learning: [
-    [100, 215, 'ASSUMPTION', 'Package bargaining', 'can balance interests'],
+    [100, 195, 'ASSUMPTION', 'Package bargaining', 'can balance interests'],
     [380, 108, 'EXPERIENCE', 'Governance + local', 'review options emerged'],
-    [670, 215, 'REVISED VIEW', 'Frameworks guide', 'questions, not labels'],
+    [670, 195, 'REVISED VIEW', 'Frameworks guide', 'questions, not labels'],
     [900, 70, 'APPLICATION', 'Cost, authorise', '+ document conditions'],
   ],
 } as const;
