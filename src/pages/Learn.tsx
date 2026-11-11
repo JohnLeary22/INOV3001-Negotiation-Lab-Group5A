@@ -1,0 +1,6 @@
+import { ArrowLeft } from 'lucide-react';
+import { lessons } from '../content/lessons';
+import LessonCard from '../components/LessonCard';
+export default function Learn({ completed, open, goHome }: { completed: number[]; open: (id: number) => void; goHome: () => void }) {
+  return <div className="page"><button className="back-link" onClick={goHome}><ArrowLeft size={15}/> Mission brief</button><div className="page-title-row"><div><p className="overline">LEARN · THE REPORT, MADE PRACTICAL</p><h1>The ten components.</h1><p className="page-intro">A short lesson for each part of the negotiation plan. Choose a module to learn the idea, connect it to our report and practise one decision.</p></div><div className="completion-stamp"><b>{completed.length}<span>/10</span></b><small>LESSONS<br/>COMPLETE</small></div></div><div className="lesson-grid">{lessons.map(lesson => <LessonCard key={lesson.id} lesson={lesson} done={completed.includes(lesson.id)} onOpen={() => open(lesson.id)}/>)}</div><div className="callout"><b>Keep the distinction clear.</b><span>Report positions are not confirmed counterpart preferences. Simulation examples in this site are hypothetical until the team records real Week 11 evidence.</span></div></div>;
+}

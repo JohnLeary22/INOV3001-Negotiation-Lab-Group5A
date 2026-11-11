@@ -1,0 +1,8 @@
+import { ArrowDownRight, ArrowRight } from 'lucide-react';
+type Props = { go: (to: string) => void };
+export default function Home({ go }: Props) {
+  return <div className="page home-page">
+    <section className="hero"><div className="hero-copy"><p className="overline">A GROUP 5A LEARNING EXPERIENCE</p><h1>The Negotiation<br/><em>Lab.</em></h1><p className="hero-subtitle">MaisonLuxe <span>×</span> Al-Nour <i>·</i> Group 5A</p><p className="hero-description">Learn our negotiation strategy. Practise the difficult decisions. Prepare to negotiate — and defend our choices.</p><div className="hero-actions"><button className="button primary" onClick={() => go('learn')}>Start with the plan <ArrowRight size={17}/></button><button className="text-button" onClick={() => go('practice')}>Go to practice <ArrowDownRight size={17}/></button></div></div><div className="hero-visual" aria-label="Five connected negotiation issues"><div className="orbital orbital-one"/><div className="orbital orbital-two"/><div className="hero-seal"><span>10</span><small>YEAR<br/>PARTNERSHIP</small></div><div className="visual-tag tag-top">LYON <b>FR</b></div><div className="visual-tag tag-bottom">RIYADH <b>SA</b></div><div className="visual-caption">A shared opportunity,<br/>five connected issues.</div></div></section>
+    <section className="scenario-strip"><div><small>THE CASE</small><b>France × Saudi Arabia</b></div><div><small>THE PROPERTY</small><b>60-room luxury retreat</b></div><div><small>THE PROPOSAL</small><b>10-year partnership</b></div><div><small>THE ASSESSMENT</small><b>Week 11 → Week 12</b></div></section>
+  </div>;
+}

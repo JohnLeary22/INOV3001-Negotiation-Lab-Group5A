@@ -1,0 +1,7 @@
+import { useState } from 'react';
+import DealBuilder from '../features/DealBuilder';
+import ConversationSimulator from '../features/ConversationSimulator';
+import QuickRehearsal from '../features/QuickRehearsal';
+import TeamRoles from '../features/TeamRoles';
+const tabs=['Simulator','Deal builder','Quick rehearsal','Team roles'];
+export default function Practice({ roles, setRole }: { roles: Record<string,string>; setRole: (role:string,name:string)=>void }) { const [tab,setTab]=useState(0); return <div className="page"><p className="overline">WEEK 11 · REHEARSAL SPACE</p><h1>Practice the negotiation.</h1><p className="page-intro">Bring the lessons together. Every counterpart line here is a hypothetical practice situation—not information about the actual group.</p><div className="tab-bar" role="tablist" aria-label="Practice activities">{tabs.map((name,i)=><button role="tab" aria-selected={tab===i} className={tab===i?'active':''} onClick={()=>setTab(i)} key={name}>{String(i+1).padStart(2,'0')} {name}</button>)}</div>{tab===0&&<ConversationSimulator/>}{tab===1&&<DealBuilder/>}{tab===2&&<QuickRehearsal/>}{tab===3&&<TeamRoles values={roles} change={setRole}/>}<div className="callout warning"><b>Public learning copy</b><span>Confidential reservation figures, fallback-project details and source documents are intentionally omitted. Simulator conversations remain hypothetical practice.</span></div></div>; }

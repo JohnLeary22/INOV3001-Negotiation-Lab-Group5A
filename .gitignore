@@ -1,0 +1,11 @@
+# Confidential assessment source material — keep outside Git and deployed assets
+/reference/
+/INOV3001_Group5A_Presentation_Source_Pack.zip
+
+# Dependencies and generated output
+/node_modules/
+/dist/
+
+# Local editor / OS files
+.DS_Store
+*.tsbuildinfo
