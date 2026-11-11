@@ -1,10 +1,8 @@
-export type DealColumn = { title: string; lines: string[] };
 export type PresentationSlide = {
   title: string;
   label: string;
   points: string[];
-  visual: string;
-  comparison?: DealColumn[];
+  graphic: 'partnership' | 'tradeoffs' | 'frameworks' | 'timeline' | 'success' | 'challenges' | 'improvements' | 'learning';
   evidence: string;
   script: string;
   cue: string;
@@ -17,11 +15,12 @@ export const presentationSlides: PresentationSlide[] = [
   {
     title: 'The opportunity & our goal', label: '01 · SCENARIO',
     points: [
-      'MaisonLuxe: first Middle East hotel, sustainable returns, protected luxury service.',
-      'Al-Nour: local guest fit, project control and disciplined costs.',
-      'A proposed 10-year partnership for a 60-room Saudi luxury retreat.'
+      'MaisonLuxe brings its brand, management expertise, training and service standards.',
+      'Al-Nour contributes investment, property ownership and local market knowledge.',
+      'Both parties depend on each other to deliver the retreat.',
+      'The proposal is a 10-year partnership for a 60-room Saudi luxury retreat.'
     ],
-    visual: 'FRANCE  +  SAUDI ARABIA  →  SHARED HOTEL',
+    graphic: 'partnership',
     evidence: 'Group 5A report, §1, printed p. 1; official Assessment 3 brief, Component 3, printed p. 3. Fictional teaching case.',
     cue: 'Name the shared opportunity before describing the disagreement.',
     seconds: 75,
@@ -30,11 +29,12 @@ export const presentationSlides: PresentationSlide[] = [
   {
     title: 'A package, not five arguments', label: '02 · PLAN BEFORE WEEK 11',
     points: [
-      'Our plan set opening proposals and preferred fee targets before the simulation.',
-      'Month 24 preferred; an earlier opening depended on extra resources and construction readiness.',
-      'Trade across fees, authority, adaptation and timing; protect core brand and safety.'
+      'We prepared fee proposals and preferred targets before the simulation.',
+      'Month 24 was preferred; an earlier opening depended on resources and construction readiness.',
+      'Five linked issues: initial fee, annual fee, authority, local adaptation and opening date.',
+      'Trade selectively while protecting core brand and safety standards.'
     ],
-    visual: 'INTERESTS  →  OPTIONS  →  CONDITIONAL PACKAGE',
+    graphic: 'tradeoffs',
     evidence: 'Group 5A report, §§2–4 and 9, printed pp. 1–3, 6; Fisher, Ury & Patton (2011); Brett (2014).',
     cue: 'Make clear these are pre-simulation positions, not the final terms.',
     seconds: 105,
@@ -43,11 +43,12 @@ export const presentationSlides: PresentationSlide[] = [
   {
     title: 'Frameworks as practical lenses', label: '03 · CULTURE',
     points: [
-      'Hofstede: check authority, relationships and process; do not infer individual behaviour.',
-      'Hall: clarify words and context; France is not simply “low-context.”',
-      'Meyer: adapt communication, trust and disagreement to the people in the room.'
+      'Hofstede prompted questions about authority and relationships—not assumptions about people.',
+      'Hall encouraged clarification; France is not simply “low-context.”',
+      'Meyer helped frame communication, trust and disagreement as choices to adapt.',
+      'The frameworks informed preparation; the record—not nationality—supports our claims.'
     ],
-    visual: 'ASK ABOUT AUTHORITY  ·  LISTEN TO LOCAL PRIORITIES  ·  READ BACK TERMS',
+    graphic: 'frameworks',
     evidence: 'Group 5A report, §§6–8, printed pp. 4–6; Hofstede et al. (2010); Hall (1976); Meyer (2014); RMIT, EURAXESS France, Tufts University and The Culture Factor.',
     cue: 'Distinguish what the frameworks suggested from what the simulation record says happened.',
     seconds: 90,
@@ -57,15 +58,11 @@ export const presentationSlides: PresentationSlide[] = [
     title: 'What happened: from opening positions to terms', label: '04 · WEEK 11 OUTCOME',
     points: [
       'Verbal agreement in principle — not a signed contract.',
-      'Governance: Al-Nour approves budgets, major spend and GM; MaisonLuxe leads daily operations, staffing/training and core brand/safety.',
-      'Joint committee for local adaptation; reporting agreed in principle.'
+      'Terms: US$500,000 upfront, 3% of annual hotel revenue and Month 20 target.',
+      'Al-Nour approves budgets, major spend and GM; MaisonLuxe leads daily operations and core standards.',
+      'Joint local-adaptation committee; reporting agreed in principle.'
     ],
-    visual: 'OPENING POSITIONS  →  DISCUSSION  →  VERBAL TERMS IN PRINCIPLE',
-    comparison: [
-      { title: 'Opening positions', lines: ['MaisonLuxe: higher fee request · Month 24', 'Al-Nour: lower fee proposal · Month 18'] },
-      { title: 'Discussed', lines: ['Several fee and upfront options were considered', 'Teams explored timing and governance trades'] },
-      { title: 'Final verbal checklist', lines: ['US$500k total upfront · 3% of total annual revenue', 'Month 20 subject to construction milestones and a delay-resolution process', 'No separate acceleration charge'] },
-    ],
+    graphic: 'timeline',
     evidence: 'Week 11 Simulation Summary, §§1–3, 5 Nov 2026. Final checklist read aloud by Al-Nour and affirmed by MaisonLuxe; verbal, not signed.',
     cue: 'Not signed. Middle numbers were just discussed.',
     seconds: 120,
@@ -75,10 +72,12 @@ export const presentationSlides: PresentationSlide[] = [
     title: 'What worked well', label: '05 · EVALUATION',
     points: [
       'Clarifying questions surfaced cost, brand and local-identity priorities.',
-      'The teams moved from single fee positions to a package of money, authority and timing.',
-      'Joint adaptation review and a read-back checklist supported shared understanding.'
+      'The teams shifted from fee positions to linked money, authority and timing.',
+      'A joint committee created a process for reviewing local adaptation.',
+      'Al-Nour read the final checklist; MaisonLuxe affirmed it.',
+      'These are observed process outcomes, not proof of commercial success.'
     ],
-    visual: 'CLARIFY  →  LINK ISSUES  →  CONFIRM',
+    graphic: 'success',
     evidence: 'Week 11 Simulation Summary, §§3–5; Group 5A report, §§4 and 8, printed pp. 3 and 5–6; Fisher et al. (2011).',
     cue: 'Process worked in some ways; not proof the deal makes money.',
     seconds: 90,
@@ -87,11 +86,12 @@ export const presentationSlides: PresentationSlide[] = [
   {
     title: 'What did not work well', label: '06 · CRITICAL REFLECTION',
     points: [
-      'Our fee terms moved below our preferred targets; opening moved from Month 24 to Month 20.',
-      'We waived the planned acceleration charge — a departure from our conditional plan.',
-      'Staffing costs were not quantified; milestones, KPIs, delay remedies and committee rules remain open.'
+      'Fee terms moved below preferred targets; the opening shifted from Month 24 to Month 20.',
+      'We waived the planned acceleration charge, departing from our conditional plan.',
+      'Staffing and acceleration costs were not quantified in the summary.',
+      'Milestones, KPIs, delay remedies and committee rules remained open.'
     ],
-    visual: 'MONTH 20 ACCEPTED  ·  EXTRA ACCELERATION FEE WAIVED',
+    graphic: 'challenges',
     evidence: 'Week 11 Simulation Summary, §§3–4; compare Group 5A report, §§2–4 and 9, printed pp. 1–3, 6. The summary does not quantify acceleration costs or establish motive.',
     cue: 'Say it straight: waived fee was a weakness. Dont guess the reason.',
     seconds: 105,
@@ -100,11 +100,12 @@ export const presentationSlides: PresentationSlide[] = [
   {
     title: 'What we would change', label: '07 · NEXT TIME',
     points: [
-      'Cost and authorise acceleration before discussing a waiver; keep a concession and stop-loss matrix.',
-      'Trade a fee waiver only for defined, valued reciprocal commitments; pause if outside mandate.',
-      'Write readiness gates, approval thresholds, committee rules, KPIs, milestones and remedies.'
+      'Original: discuss the earlier opening with resources and readiness conditions.',
+      'Next time: cost acceleration and secure authority before discussing a waiver.',
+      'Exchange any waiver only for a defined, valued reciprocal commitment.',
+      'Write readiness gates, approvals, committee rules, KPIs and remedies.'
     ],
-    visual: 'COST IT  →  AUTHORISE IT  →  TRADE IT  →  WRITE IT',
+    graphic: 'improvements',
     evidence: 'Recommendation based on Week 11 Simulation Summary, §4 and open items in §4; Group 5A report, §§3–4 and 8–10, printed pp. 2–7.',
     cue: 'Next-time ideas only, they werent agreed terms.',
     seconds: 90,
@@ -113,11 +114,13 @@ export const presentationSlides: PresentationSlide[] = [
   {
     title: 'What we learned', label: '08 · LEARNING',
     points: [
-      'Package bargaining can create workable governance and local-adaptation options.',
-      'Cultural frameworks help us ask and listen; they do not explain people by nationality.',
-      'Agreement is not the same as a sound deal: conditions need costed, authorised discipline.'
+      'Initial assumption: different interests can be balanced through a package.',
+      'Experience: package bargaining supported governance and local-review options.',
+      'Revised view: cultural frameworks help us ask and listen, not stereotype.',
+      'Future application: cost, authorise and document conditions before agreeing.',
+      'A verbal agreement is not evidence of a commercially sound deal.'
     ],
-    visual: 'WE REACHED TERMS — AND WE CAN NAME THE TRADE-OFF',
+    graphic: 'learning',
     evidence: 'Official Assessment 3 brief, Component 3 and simulation-evaluation rubric, printed pp. 3 and 6; Week 11 Simulation Summary, §4; Group 5A report, §§6–10, printed pp. 4–7.',
     cue: 'Main takeaways; then questions.',
     seconds: 45,
