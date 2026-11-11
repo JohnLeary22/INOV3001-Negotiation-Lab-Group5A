@@ -31,6 +31,15 @@
 .presentation-page .slide-index button.current{border-color:var(--burgundy);background:#e7e2d9;color:var(--burgundy)}
 .presentation-page .slide-index button span{color:#987c4f}
 .presentation-page .defence-section{margin-top:38px}
+.presentation-page .defence-question{min-width:0}
+.presentation-page .defence-card-heading{display:flex;align-items:flex-start;gap:9px}
+.presentation-page .defence-card-heading>span{flex:0 0 20px;font-size:9px;line-height:1.55;color:var(--burgundy);font-weight:700}
+.presentation-page .defence-card-heading h3{margin:0;color:var(--ink);font-size:12px;line-height:1.45;font-weight:700}
+.presentation-page .defence-card-keywords{margin:8px 0 9px;padding-left:29px;color:#7a8181;font-size:9px;line-height:1.55}
+.presentation-page .defence-card-keywords em{font-style:italic}
+.presentation-page .defence-card-points ul{margin:0;padding-left:42px;display:grid;gap:3px}
+.presentation-page .defence-card-points li{font-size:10px;line-height:1.5;color:#606c71}
+.presentation-page .defence-card-points li::marker{color:var(--burgundy)}
 .presenter-toolbar,.presenter-nav{display:none}
 
 /* The presenter canvas is constrained by both viewport dimensions and remains 16:9. */

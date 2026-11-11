@@ -95,7 +95,11 @@ export default function Presentation({ toggleProjector, projector }: Props) {
     <section className="defence-section">
       <p className="overline">ORAL DEFENCE · PRACTISE THE REASONING</p><h2>Questions worth preparing for.</h2>
       <p className="page-intro">Use the recorded terms for facts. Separate those facts from analysis, inference and recommendations.</p>
-      <div className="question-grid">{defenceQuestions.map((item, i) => <details className={`defence-question ${item.featured ? 'featured' : ''}`} key={item.q}><summary><span>{String(i + 1).padStart(2, '0')}</span>{item.q}</summary><p>{item.a}</p></details>)}</div>
+      <div className="question-grid">{defenceQuestions.map((item, i) => <article className="defence-question" key={item.topic}>
+        <header className="defence-card-heading"><span>{String(i + 1).padStart(2, '0')}</span><h3>{item.topic}</h3></header>
+        <section className="defence-card-keywords" aria-label="Keywords"><em>{item.keywords.join(' · ')}</em></section>
+        <section className="defence-card-points" aria-label="Key points"><ul>{item.points.map(point => <li key={point}>{point}</li>)}</ul></section>
+      </article>)}</div>
     </section>
   </div>;
 }

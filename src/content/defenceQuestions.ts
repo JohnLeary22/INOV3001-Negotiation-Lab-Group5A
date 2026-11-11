@@ -1,18 +1,111 @@
-export const defenceQuestions = [
-  { q: 'Why did you choose an integrative strategy?', a: 'The five issues affected one another, so we planned to ask about interests and negotiate a package instead of treating each fee as a separate contest. In the simulation, the discussion connected fees with decision rights, operations, the opening date and local adaptation. The joint committee and division of budget versus operating authority are examples of package solutions. Fisher, Ury and Patton (2011) and Brett (2014) support an interest-based approach. The outcome is a verbal agreement in principle, not proof of commercial success.' },
-  { q: 'What was the final agreement, and what was its status?', a: 'The end-of-meeting checklist recorded a total initial payment of US$500,000, a 3% management fee on total annual hotel revenue, and a Month 20 opening target. No separate acceleration charge was included. Al-Nour read the checklist aloud and MaisonLuxe affirmed it. We call this a verbal agreement in principle, not a signed contract. Exact milestone dates, delay remedies and several governance mechanisms were still unresolved.' },
-  { q: 'How do you justify the fee outcome, and why was the highest fee not the goal?', a: 'Our report planned opening proposals and lower preferred targets for upfront and annual fees. The final terms were reached through package bargaining, but we cannot say the other terms fully offset the fee movement or prove profitability. The goal was a viable first Middle East hotel, reasonable returns, brand protection and a commitment within MaisonLuxe’s capacity—not maximum fees at any cost. Project revenue, costs and margins were not established.' },
-  { q: 'Why did you agree to Month 20 without the planned acceleration charge?', a: 'Al-Nour rejected the charge as unaffordable. We accepted Month 20 subject to a realistic schedule and timely construction, but our original plan made added resources and readiness conditions for that date. We waived the fee condition. That was a weakness: we accepted acceleration without the planned cost recovery. Next time we would cost the acceleration first and seek an authorised, valued reciprocal term before agreeing.', featured: true },
-  { q: 'Did you breach your reservation conditions or become too focused on agreement?', a: 'We departed from our original Month 20 condition by waiving its acceleration charge. Some other safeguards remained in the verbal terms, but that does not erase the concession. The record does not establish our motive; agreement pressure may have weakened our discipline. We should acknowledge that risk rather than claim the package was optimal. Next time we would cost the change, pause for authorisation and be prepared to continue negotiating or walk away.', featured: true },
-  { q: 'What worked well in the simulation?', a: 'The summary reports clarifying questions, acknowledgement of financial pressures and movement from positional fees toward package trade-offs. The joint committee offered a practical way to review local design and guest-service adaptations. At the end, Al-Nour read the checklist and MaisonLuxe affirmed it, helping establish a shared record. These practices support integrative bargaining and reduce ambiguity. They do not prove that every misunderstanding was prevented or that the hotel will perform financially.' },
-  { q: 'What did not work well, beyond the waived charge?', a: 'Our fee terms moved down from the opening positions and preferred targets in the report, and we accepted Month 20 rather than Month 24. Most importantly, we waived the planned acceleration payment. We also left implementation details open: milestone dates, performance measures, delay remedies, committee voting and deadlock rules, and contract wording. Faster preparation could strain staffing or training, but those costs were not quantified. We should distinguish this possible risk from a measured loss.' },
-  { q: 'How were governance and general-manager decisions divided?', a: 'The verbal checklist gave Al-Nour approval over annual budgets, major expenditure and the general manager. MaisonLuxe may recommend general-manager candidates and leads daily operations, staffing, training and service quality. MaisonLuxe retains final approval over core brand and safety standards. Regular financial reviews and operational reporting were anticipated. The exact approval thresholds, appointment procedure and contractual wording still need to be written; we should not imply they were finalised.' },
-  { q: 'How did you balance Saudi adaptation and MaisonLuxe standards?', a: 'The teams supported a joint committee to review Saudi food, interior design, guest services and related disagreements. This recognises Al-Nour’s local knowledge while preserving MaisonLuxe’s final approval over core brand and safety standards. The committee is a process for reviewing adaptations, not permission for unilateral changes. Its voting and escalation rules remain open. The record supports the committee in principle, but not a claim that particular changes were implemented.' },
-  { q: 'How did cultural frameworks affect actual decisions?', a: 'Hofstede helped us prepare questions about authority and relationships; Hall reminded us to clarify meaning; Meyer helped frame trust and disagreement as workplace choices. The observed decisions were the division of approval rights, joint local-adaptation review, clarifying questions and a read-aloud checklist. These are consistent with our preparation, but we cannot say nationality caused them. The counterpart were students role-playing a fictional company, not a representative cultural sample.' },
-  { q: 'How did you avoid stereotyping French or Saudi negotiators?', a: 'We treated country comparisons as broad planning lenses, not predictions about individuals. Our report explicitly says France should not be labelled purely low-context and that national averages cannot determine how the counterpart behaves. In the simulation we can describe recorded actions—questions, restatements and checklist confirmation—without attributing them to nationality. Hall, Hofstede and Meyer helped us decide what to check, not what conclusion to impose.' },
-  { q: 'What did Al-Nour appear to care about, and how do you know?', a: 'The simulation summary records that Al-Nour emphasised investment protection, Saudi identity and an early opening. Its initial positions were approximately US$350,000 upfront, 2%, and Month 18. Those recorded priorities help explain why costs, local adaptation and timing mattered in the discussion. We should call these observed positions and stated priorities, not assume all Saudi businesses share them or infer private financial limits.' },
-  { q: 'What was your BATNA, and does it prove the Saudi deal was better?', a: 'Our BATNA was a private alternative to agreement. A best alternative helps us decide whether to accept a proposal, but it does not prove which option has greater value. We lacked comparable revenue, margin, cost and risk information. We should not disclose confidential fallback details in a public presentation or claim either option was definitely superior.' },
-  { q: 'What would you change if you negotiated again?', a: 'We would cost and authorise an accelerated opening before bargaining over its charge. We would keep an approved concession matrix and pause before moving outside it. Any fee waiver would require a specific reciprocal commitment whose value we can assess. We would also write readiness milestones, approval thresholds, the general-manager process, committee voting and escalation, performance measures and delay remedies into a term sheet. These are recommendations; they were not fully agreed in the simulation.' },
-  { q: 'What did the group learn?', a: 'We learned that a package can create workable governance and local-adaptation options, but agreement is not the same as a commercially sound deal. The waived acceleration payment exposed a gap between our conditional plan and our final terms. We also learned to use cultural frameworks to ask and listen, not to explain behaviour by nationality. Our reflection is grounded in the checklist and recorded concessions; we do not claim unrecorded reactions or a quantified financial result.' },
-  { q: 'How did AI and group contributions support the preparation?', a: 'The submitted report says Yubo drafted business context and cultural factors; Yiyuan drafted interests/concessions and risks; John drafted counterpart interests and cultural frameworks. Goal, strategy, communication and BATNA were shared planning sections. The report says AI helped organise and connect drafts and format the document; the team checked figures against the case and cultural comparisons against The Culture Factor, and revised stereotyping risks. It gives limited prompt examples, so we should not invent more. The simulation summary does not assign speaking roles.' }
+export type DefenceRevisionCard = {
+  topic: string;
+  keywords: readonly string[];
+  points: readonly string[];
+};
+
+export const defenceQuestions: readonly DefenceRevisionCard[] = [
+  {
+    topic: 'Hofstede — Individualism and power distance',
+    keywords: ['Hofstede', 'individualism', 'collectivism', 'power distance', 'hierarchy', 'hierarchical', 'authority', 'cultural dimensions', 'decision-making', 'cultural scores'],
+    points: [
+      'Individualism: France 74, Saudi Arabia 48.',
+      'Power distance: France 68, Saudi Arabia 72.',
+      'Both sides may value authority and defined responsibilities.',
+      'Outcome: Al-Nour controls major expenditure; MaisonLuxe protects brand and operations.',
+    ],
+  },
+  {
+    topic: 'Hall — High- and low-context communication',
+    keywords: ['Hall', 'high context', 'low context', 'indirect communication', 'direct communication', 'contextual cues', 'implicit meaning', 'misunderstandings', 'communication style', 'polite responses'],
+    points: [
+      'Hall distinguishes high-context and low-context communication.',
+      'France is not necessarily entirely low-context.',
+      'Politeness or positive language does not guarantee agreement.',
+      'Clarify concerns, summarise decisions and confirm them in writing.',
+    ],
+  },
+  {
+    topic: 'Erin Meyer — Trust and disagreement',
+    keywords: ['Erin Meyer', 'Culture Map', 'trust', 'relationship-based trust', 'task-based trust', 'disagreement', 'disagreeing', 'building relationships', 'professional competence', 'interpersonal trust'],
+    points: [
+      'Meyer examines trusting, disagreeing, deciding and communicating.',
+      'Build trust through relationships and demonstrated competence.',
+      'Explain disagreements respectfully rather than rejecting proposals outright.',
+      'Joint decisions on adaptations; core brand and safety standards protected.',
+    ],
+  },
+  {
+    topic: 'Trompenaars — Universalism and particularism',
+    keywords: ['Trompenaars', 'universalism', 'particularism', 'universal rules', 'specific circumstances', 'cultural adaptation', 'brand consistency', 'local flexibility', 'standardisation', 'exceptions'],
+    points: [
+      'Universalism: consistent standards and rules.',
+      'Particularism: circumstances and relationships influence decisions.',
+      'MaisonLuxe needs brand consistency; Al-Nour needs local flexibility.',
+      'Joint review of adaptations without compromising core standards.',
+      'Supplementary framework, not a central framework in the submitted report.',
+    ],
+  },
+  {
+    topic: 'Cultural intelligence — Framework limitations',
+    keywords: ['cultural intelligence', 'CQ', 'stereotypes', 'generalisations', 'assumptions', 'contradictory evidence', 'cultural differences', 'actual behaviour', 'reliability', 'cultural frameworks'],
+    points: [
+      'Cultural frameworks guide preparation, not predictions.',
+      'Observe actual partner behaviour and ask clarifying questions.',
+      'Adapt communication rather than reinforce stereotypes.',
+      'A student simulation cannot prove national cultural patterns.',
+    ],
+  },
+  {
+    topic: 'Financial concessions — Was the deal successful?',
+    keywords: ['financial concessions', 'negotiation success', 'successful outcome', 'initial fee', 'management fee', '500000', '3 percent', 'financial targets', 'compromise', 'better deal'],
+    points: [
+      'Agreement does not automatically mean successful negotiation.',
+      'Significant financial and timing concessions favoured Al-Nour.',
+      "Portugal offered 3.25% versus Saudi Arabia's 3%.",
+      'Smaller Portugal project could be more manageable for MaisonLuxe.',
+      'Personal view: would have seriously considered walking away.',
+    ],
+  },
+  {
+    topic: 'Integrative negotiation — Creating mutual value',
+    keywords: ['integrative negotiation', 'win-win', 'mutual benefit', 'trade-offs', 'concessions', 'bargaining', 'shared interests', 'package deal', 'value creation', 'negotiation strategy'],
+    points: [
+      'Integrative negotiation focuses on underlying interests.',
+      'Negotiate fees, authority, timing and adaptation together.',
+      'Al-Nour gains financial oversight; MaisonLuxe retains operational control.',
+      'Potential mutual benefit does not necessarily mean equal concessions.',
+    ],
+  },
+  {
+    topic: 'Time — Opening date and acceleration payment',
+    keywords: ['opening date', 'timeline', 'month 20', 'month 24', 'acceleration', 'accelerated opening', '300000', 'waived payment', 'deadlines', 'time pressure'],
+    points: [
+      'Preferred opening: month 24.',
+      'Conditional concession: month 20 plus US$300,000.',
+      'Actual outcome: month 20, acceleration fee waived.',
+      'Improvement: negotiate reciprocal value and verify operational feasibility.',
+    ],
+  },
+  {
+    topic: 'BATNA — Portugal versus Saudi Arabia',
+    keywords: ['BATNA', 'Portugal', 'alternative deal', 'fallback', 'walk away', 'reservation point', 'outside option', 'five-year contract', 'opportunity cost', 'Saudi versus Portugal'],
+    points: [
+      'Personal preference: Portugal over the final Saudi package.',
+      'Portugal: five years, 35 rooms, 3.25% management fee.',
+      'Saudi Arabia: ten years, 60 rooms, 3% management fee.',
+      'Saudi agreement involved substantial concessions and greater operational commitments.',
+      'A credible BATNA gives negotiators confidence to reject an unfavourable agreement.',
+    ],
+  },
+  {
+    topic: 'Brand control — Local adaptation',
+    keywords: ['brand identity', 'brand standards', 'local adaptation', 'Saudi culture', 'operational control', 'joint committee', 'guest experience', 'brand protection', 'decision rights', 'localisation'],
+    points: [
+      'Protect brand identity, service quality, training and safety.',
+      'Allow Saudi adaptations to food, interiors and guest services.',
+      'Joint committee reviews proposed changes.',
+      'Local flexibility must not override essential brand standards.',
+    ],
+  },
 ];
